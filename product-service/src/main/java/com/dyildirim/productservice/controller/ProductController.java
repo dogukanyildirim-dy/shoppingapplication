@@ -26,5 +26,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public List<ProductResponse> getAllProducts() {
         return productService.getAllProducts();
+
     }
+
 }
