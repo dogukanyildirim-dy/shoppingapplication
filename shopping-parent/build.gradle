@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.dyildirim'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springBootVersion = '3.0.1'
+    lombokVersion = '1.18.24'
+    testContainersVersion = '1.17.6'
+    postgreVersion = '42.5.1'
+    queryDslVersion = '5.0.0'
+    springCloudVersion = '2022.0.0'
+}
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}
