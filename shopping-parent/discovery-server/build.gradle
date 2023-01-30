@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.dyildirim'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:${netflixEurekaVersion}"
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}

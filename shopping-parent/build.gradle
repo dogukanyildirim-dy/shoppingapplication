@@ -16,9 +16,11 @@ ext {
     postgreVersion = '42.5.1'
     queryDslVersion = '5.0.0'
     springCloudVersion = '2022.0.0'
+    netflixEurekaVersion = '4.0.0'
 }
 
 dependencies {
+    implementation platform("org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}")
 
 }
 

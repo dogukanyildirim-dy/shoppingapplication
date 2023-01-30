@@ -29,9 +29,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 
-    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.0'
-
+    implementation "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${netflixEurekaVersion}"
+    implementation 'com.google.code.gson:gson:2.10.1'
 
     annotationProcessor(
             "com.querydsl:querydsl-apt:${queryDslVersion}:jpa",
