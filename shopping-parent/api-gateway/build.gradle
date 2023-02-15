@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.dyildirim'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    implementation "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${netflixEurekaVersion}"
+    implementation 'com.google.code.gson:gson:2.10.1'
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway:4.0.0'
+
+
+
+}

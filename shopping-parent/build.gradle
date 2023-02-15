@@ -21,7 +21,6 @@ ext {
 
 dependencies {
     implementation platform("org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}")
-
 }
 
 test {

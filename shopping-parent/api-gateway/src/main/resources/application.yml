@@ -1,0 +1,40 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8080
+logging:
+  level:
+    - info
+    - org:
+       springframework:
+          cloud:
+            gateway:
+              - trace
+              - route:
+                  RouteDefinitionLocator: info
+spring:
+  cloud:
+    discovery:
+      locator:
+        enabled: true
+        lowerCaseServiceId: true
+    gateway:
+      routes:
+      - id: product-service
+        uri: lb://product-service
+        predicates:
+          - Path=/api/product/**
+      - id: order-service
+        uri: lb://order-service
+        predicates:
+          - Path=/api/order/**
+      - id: inventory-service
+        uri: lb://inventory-service
+        predicates:
+          - Path=/api/inventory/**
+  application:
+    name: api-gateway
+  main:
+    web-application-type: reactive
